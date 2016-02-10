@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="AppTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-02-10T18:04:31" hostname="epicodus-65.local" time="0.001">
+  <properties/>
+  <testcase name="checkWinner_paperWin_paperWins" classname="AppTest" time="0.0"/>
+  <testcase name="checkWinner_rockVSrock_tie" classname="AppTest" time="0.0"/>
+  <testcase name="checkWinner_ScissorslosesToRock_rockwins" classname="AppTest" time="0.0"/>
+  <testcase name="checkWinner_rockBeatsScissors_rockwins" classname="AppTest" time="0.0"/>
+  <testcase name="checkWinner_ScissorsBeatsPaper_rockwins" classname="AppTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
