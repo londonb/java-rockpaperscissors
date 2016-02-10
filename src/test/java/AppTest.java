@@ -7,23 +7,26 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import static org.assertj.core.api.Assertions.assertThat;
 
-// public class AppTest extends FluentTest {
-//   public WebDriver webDriver = new HtmlUnitDriver();
-//   public WebDriver getDefaultDriver() {
-//       return webDriver;
-//   }
-//
-//   @ClassRule
-//   public static ServerRule server = new ServerRule();
-//
-//   @Test
-//   public void rootTest() {
-//       goTo("http://localhost:4567/");
-//       assertThat(pageSource()).contains("");
-//   }
-// }
+public class AppTest extends FluentTest {
+  public WebDriver webDriver = new HtmlUnitDriver();
+  public WebDriver getDefaultDriver() {
+      return webDriver;
+  }
+  //integration testing
+  @ClassRule
+  public static ServerRule server = new ServerRule();
 
-public class AppTest {
+  @Test
+  public void rootTest() {
+      goTo("http://localhost:4567/");
+      assertThat(pageSource()).contains("Player 1:");
+      // submit(".btn");
+      // assertThat(pageSource()).contains("Player 2:");
+      submit(".btn");
+      assertThat(pageSource()).contains("Outcome");
+  }
+
+  //unit testing
   @Test
   public void checkWinner_rockBeatsScissors_rockwins() {
     App testApp = new App();
