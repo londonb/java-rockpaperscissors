@@ -20,8 +20,6 @@ public class AppTest extends FluentTest {
   public void rootTest() {
       goTo("http://localhost:4567/");
       assertThat(pageSource()).contains("Player 1:");
-      // submit(".btn");
-      // assertThat(pageSource()).contains("Player 2:");
       submit(".btn");
       assertThat(pageSource()).contains("Outcome");
   }
